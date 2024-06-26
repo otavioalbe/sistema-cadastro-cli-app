@@ -65,4 +65,5 @@ public class ServicoCadastramentoController {
     public List<Assinatura> assinaturasDoApp (@PathVariable Long codApp){
         return assinaturaService.assinaturasDoApp(codApp);
     }
+    
 }

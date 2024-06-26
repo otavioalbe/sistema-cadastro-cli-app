@@ -39,12 +39,12 @@ public class AssinaturaService {
     }
 
     public List<Assinatura> listaTiposAssinaturas(String tipo){
-        tipo = tipo.toLowerCase();
+        tipo = tipo.toUpperCase();
         switch (tipo) {
-            case "todas" -> {
+            case "TODAS" -> {
                 return listarAssinaturas();
             }
-            case "ativas" -> {
+            case "ATIVAS" -> {
                 List<Assinatura> assinaturasAtivas = new ArrayList<>();
                 LocalDate hoje = LocalDate.now();
                 for (Assinatura a : listarAssinaturas()) {
@@ -54,7 +54,7 @@ public class AssinaturaService {
                 }
                 return assinaturasAtivas;
             }
-            case "canceladas" -> {
+            case "CANCELADAS" -> {
                 List<Assinatura> assinaturasCanceladas = new ArrayList<>();
                 LocalDate hoje = LocalDate.now();
                 for (Assinatura a : listarAssinaturas()) {

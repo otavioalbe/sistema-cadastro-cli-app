@@ -9,12 +9,14 @@
         <outputRelativeToContentRoot value="true" />
         <module name="servico-pagamentos" />
         <module name="cadastramento-geral" />
+        <module name="servico-assinaturas-validas" />
       </profile>
     </annotationProcessing>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="cadastramento-geral" options="-parameters" />
+      <module name="servico-assinaturas-validas" options="-parameters" />
       <module name="servico-pagamentos" options="-parameters" />
     </option>
   </component>
