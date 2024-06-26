@@ -102,4 +102,8 @@ public class AssinaturaService {
     public boolean verificaAplicativo(Long idApp){
         return aplicativoRepository.existsById(idApp);
     }
+
+    public Assinatura assinaturaPorId(Long id) {
+        return repository.findById(id).orElse(null);
+    }
 }

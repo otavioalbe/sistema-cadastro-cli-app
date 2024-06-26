@@ -14,12 +14,12 @@ public class Assinatura {
     private String status;
 
 
-    public Assinatura(Long codApp, Long codCli) {
+    public Assinatura(Long id, Long codApp, Long codCli, LocalDate dataCriacao, LocalDate dataExpiracao, String status) {
         this.codApp = codApp;
         this.codCli = codCli;
-        this.dataCriacao = LocalDate.now();
-        this.dataExpiracao = this.dataCriacao.plusMonths(1);
-        this.status = "ATIVA";
+        this.dataCriacao = dataCriacao;
+        this.dataExpiracao = dataExpiracao;
+        this.status = status;
     }
 
     public Long getId() {

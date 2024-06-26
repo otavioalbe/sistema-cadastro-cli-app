@@ -3,25 +3,16 @@ package com.t3es2.servico_assinaturas_validas.service;
 import com.t3es2.servico_assinaturas_validas.entity.Assinatura;
 import org.springframework.stereotype.Service;
 
-import java.util.HashMap;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 @Service
 public class ServicoAssinaturasValidas {
     private List<Assinatura> assinaturasValidas = new LinkedList<>();
 
-    public boolean isAssinaturaValida(Long codAss, List<Assinatura> todasAssinaturas) {
-        for(Assinatura a : assinaturasValidas){
-            if(a.getId().equals(codAss))
-                return true;
-        }
-        for(Assinatura a : todasAssinaturas){
-            if(a.getId().equals(codAss)){
-                assinaturasValidas.add(a);
-                return true;
-            }
+    public boolean isAssinaturaValida(Assinatura assinatura) {
+        if(Objects.equals(assinatura.getStatus(), "ATIVA")){
+            assinaturasValidas.add(assinatura);
+            return true;
         }
         return false;
     }
