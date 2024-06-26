@@ -15,19 +15,12 @@ public class PagamentoService {
     private PagamentoRepository repository;
 
 
-    public ResponseEntity<Pagamento> registrarPagamento(Pagamento pagamento){
-        if(true){
-            Long codAssinatura = pagamento.getCodAssinatura();
-            float valorPago = pagamento.getValorPago();
-            LocalDate dataPagamento = pagamento.getDataPagamento();
-            Pagamento novoPagamento = new Pagamento(codAssinatura,valorPago,dataPagamento);
-            repository.save(novoPagamento);
-            return ResponseEntity.ok().build();
-        }else{
-            return ResponseEntity.badRequest().build();
-        }
+    public Pagamento registrarPagamento(Pagamento pagamento){
+        Long codAssinatura = pagamento.getCodAssinatura();
+        float valorPago = pagamento.getValorPago();
+        LocalDate dataPagamento = pagamento.getDataPagamento();
+        Pagamento novoPagamento = new Pagamento(codAssinatura,valorPago,dataPagamento);
+        repository.save(novoPagamento);
+        return novoPagamento;
     }
-
-    //public boolean verificaAssinatura(){
-    //}
 }
