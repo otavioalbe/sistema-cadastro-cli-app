@@ -7,6 +7,7 @@
         <option value="$PROJECT_DIR$/servico-pagamentos/pom.xml" />
         <option value="$PROJECT_DIR$/cadastramento-geral/pom.xml" />
         <option value="$PROJECT_DIR$/servico-assinaturas-validas/pom.xml" />
+        <option value="$PROJECT_DIR$/naming-server/pom.xml" />
       </list>
     </option>
   </component>
